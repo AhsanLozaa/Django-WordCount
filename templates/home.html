@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+{# Heading #}
+<h1>WORD COUNT</h1>
+
+
+{#Code for the table view#}
+<table class="table" id="customers">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Profession</th>
+        <th>Email ID</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for r in final_all %}
+        <tr>
+            <td>{{ r.0 }}</td>
+            <td>{{ r.1 }}</td>
+            <td>{{ r.2 }}</td>
+            <td>{{ r.3 }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
