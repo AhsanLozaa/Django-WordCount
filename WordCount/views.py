@@ -13,7 +13,7 @@ def home(request):
     list4 = db_list[3]
 
     all_final_list = []
-    for i in range(0, 4):
+    for i in range(0, len(list1)):
         new_list = []
         new_list.append(list1[i])
         new_list.append(list2[i])
